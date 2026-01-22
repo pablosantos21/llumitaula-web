@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E89254;
+  --color-secondary: #8FA189;
+  --color-text-heading: #7B8E6F;
+  
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-[#333333];
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-medium text-text-heading;
+  }
+}
