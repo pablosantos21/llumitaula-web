@@ -1,6 +1,6 @@
 ---
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,33 +8,42 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="description"
-            content="Llum i Taula - Comedores escolares artesanos, sostenibles y educativos."
-        />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body class="bg-white selection:bg-primary selection:text-white">
-        <slot />
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Llum i Taula - Comedores escolares artesanos, sostenibles y educativos."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white selection:bg-primary selection:text-white">
+    <div class="absolute top-0 left-0 h-12 w-full">
+      <div
+        class="bg-primary px-8 py-3 rounded-b-3xl flex justify-between items-center text-white"
+      >
+        <span class="text-xl font-medium tracking-wide">llum i taula</span>
+        <span class="text-sm font-light">¿Hablamos?</span>
+      </div>
+    </div>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-    :root {
-        scroll-behavior: smooth;
-    }
-    body {
-        font-family: "Inter", sans-serif;
-    }
+  :root {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #fcfcfb;
+  }
 </style>

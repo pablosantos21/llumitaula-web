@@ -3,42 +3,24 @@
 ---
 
 <section
-    id="inicio"
-    class="relative min-h-[85vh] flex items-end pb-20 px-6 overflow-hidden rounded-3xl mt-4 mx-4"
+  class="h-150 w-full overflow-hidden font-sans rounded-b-3xl"
+  style="background-image: url('/images/hero_background.png'); background-size: cover; background-position: center;"
 >
-    <img
-        src="/images/hero_child_lunchbox_1769098789550.png"
-        alt="Niño feliz con su comida"
-        class="absolute inset-0 w-full h-full object-cover"
-    />
-    <div
-        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-    >
+  <div class="h-full flex flex-col justify-end px-12 pb-16">
+    <div class="max-w-2xl">
+      <h1
+        class="text-5xl md:text-6xl font-light leading-tight text-white drop-shadow-md"
+      >
+        Alimentamos con cariño,<br />
+        cuidamos con sabor
+      </h1>
     </div>
-
-    <div class="relative z-10 max-w-4xl">
-        <h1
-            class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4"
-        >
-            Cocinamos para su futuro, con el sabor de hoy.
-        </h1>
-        <p class="text-xl text-white/90 max-w-2xl mb-8">
-            Servicio de comedor escolar artesano, sostenible y educativo. Donde
-            cada bocado cuenta una historia de salud y respeto por el producto.
-        </p>
-        <div class="flex flex-wrap gap-4">
-            <a
-                href="#contacto"
-                class="bg-primary hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg"
-            >
-                Conocer el proyecto
-            </a>
-            <a
-                href="#donde-estamos"
-                class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-white/30"
-            >
-                Nuestros centros
-            </a>
-        </div>
-    </div>
+  </div>
 </section>
+
+<style>
+  /* Extra polish if needed */
+  h1 {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+</style>

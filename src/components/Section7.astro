@@ -1,0 +1,67 @@
+---
+interface Testimonial {
+  name: string;
+  role: string;
+  quote: string;
+}
+
+export interface Section7Props {
+  title?: string;
+  testimonials?: Testimonial[];
+}
+
+const {
+  title = "Nuestras familias y colegios",
+  testimonials = [
+    {
+      name: "Ana P.",
+      role: "Madre de alumno",
+      quote:
+        "Desde que Llum i Taula llegó al colegio, mi hijo ha empezado a disfrutar más de la comida y ha aprendido a comer más saludable.",
+    },
+    {
+      name: "Jorge M.",
+      role: "Director de colegio",
+      quote:
+        "No solo es una empresa de comida escolar, sino una forma de educar a los niños en la alimentación. Es un cambio que se siente en el día a día.",
+    },
+    {
+      name: "Ana P.",
+      role: "Madre de alumno",
+      quote:
+        "Desde que Llum i Taula llegó al colegio, mi hijo ha empezado a disfrutar más de la comida y ha aprendido a comer más saludable.",
+    },
+  ],
+} = Astro.props as Section7Props;
+---
+
+<section
+  class="py-16 px-6 md:px-14 bg-white"
+  aria-labelledby="section7-heading"
+>
+  <div class="max-w-7xl mx-auto">
+    <h2
+      id="section7-heading"
+      class="text-[#9aa98f] text-4xl md:text-5xl font-light leading-tight mb-12"
+    >
+      {title}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        testimonials.map((testimonial) => (
+          <div class="bg-linear-to-br from-[#e5b89f] to-[#e57f3b] rounded-3xl p-8 text-white shadow-lg">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-white rounded-full shrink-0" />
+              <div>
+                <p class="font-semibold text-lg">{testimonial.name}</p>
+                <p class="text-sm opacity-90">{testimonial.role}</p>
+              </div>
+            </div>
+            <p class="text-base leading-relaxed">"{testimonial.quote}"</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

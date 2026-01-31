@@ -1,0 +1,38 @@
+---
+const {
+  imageSrc = "/images/section1.png",
+  title = "¡Sabores que nutren, cuidan y educan!",
+  subtitle = "Gastronomía escolar que combina creatividad y equilibrio nutricional para un crecimiento saludable.",
+  buttonText = "Conócenos",
+  alt = "Niña en clase",
+} = Astro.props;
+---
+
+<section
+  class="py-8 px-6 md:py-10 md:px-14 flex flex-col md:flex-row gap-6 md:gap-15 items-center"
+  aria-labelledby="section1-title"
+>
+  <div class="content text-center md:text-left flex flex-col">
+    <h2
+      id="section1-title"
+      class="text-[#9aa98f] font-light leading-tight mb-3 text-4xl"
+    >
+      {title}
+    </h2>
+    <p class="text-[#7a8a7a] text-base md:text-lg mx-auto md:mx-0 max-w-xl">
+      {subtitle}
+    </p>
+    <div>
+      <a
+        class="inline-block mt-6 bg-[#e57f3b] text-white px-8 py-3 rounded-full shadow-md"
+        href="#contact">{buttonText}</a
+      >
+    </div>
+  </div>
+  <img
+    src={imageSrc}
+    alt={alt}
+    loading="lazy"
+    class="mt-6 md:mt-0 w-full rounded-lg object-cover max-h-72 md:max-h-96 mx-auto md:ml-6 md:flex-1"
+  />
+</section>

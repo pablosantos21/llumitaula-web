@@ -1,0 +1,78 @@
+---
+const {
+  title = "Una ventana a nuestra cocina y creatividad",
+  subtitle = "Síguenos en Instagram para conocer nuestras actividades, recetas y más sobre cómo transformamos la alimentación escolar en una aventura saludable.",
+  instagramUrl = "https://www.instagram.com/llumitaula/",
+  logoSrc = "/images/logo.png",
+} = Astro.props;
+---
+
+<section
+  class="py-16 px-6 md:px-14 bg-white"
+  aria-labelledby="section8-heading"
+>
+  <div class="max-w-7xl mx-auto bg-[#9aa98f] rounded-3xl p-12 md:p-16">
+    <div class="flex flex-col md:flex-row gap-12 items-center">
+      <!-- Left side: Text and Instagram -->
+      <div class="flex-1 text-white space-y-8">
+        <h2
+          id="section8-heading"
+          class="text-4xl md:text-5xl font-light leading-tight"
+        >
+          {title}
+        </h2>
+        <p class="text-lg leading-relaxed opacity-95">
+          {subtitle}
+        </p>
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center w-16 h-16 bg-[#e57f3b] rounded-full hover:bg-[#d4703a] transition-colors"
+          aria-label="Síguenos en Instagram"
+        >
+          <svg
+            class="w-8 h-8 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right side: Card -->
+      <div class="flex-1 flex justify-center">
+        <div
+          class="bg-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-md"
+        >
+          <div class="h-24 bg-white"></div>
+          <div class="bg-[#e57f3b] p-12 min-h-[300px] relative">
+            <h3
+              class="text-white text-4xl md:text-5xl font-light leading-tight"
+            >
+              Gastronomía escolar
+            </h3>
+            <svg
+              class="absolute bottom-8 right-8 w-12 h-12 text-white opacity-80"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+              <path d="M7 2v20"></path>
+              <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

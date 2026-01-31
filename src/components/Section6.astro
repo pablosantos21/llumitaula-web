@@ -1,0 +1,46 @@
+---
+const {
+  imageSrc = "/images/kids_cafeteria_healthy_1769098804950.png",
+  imageAlt = "Niña estudiando",
+  title = "Trabajamos con pasión",
+} = Astro.props;
+---
+
+<section
+  class="py-16 px-6 md:px-14 bg-white"
+  aria-labelledby="section6-heading"
+>
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+    <!-- Left side: Image -->
+    <div class="flex-1">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        class="w-full h-auto rounded-3xl shadow-lg object-cover"
+      />
+    </div>
+
+    <!-- Right side: Text -->
+    <div class="flex-1 space-y-8">
+      <h2
+        id="section6-heading"
+        class="text-[#9aa98f] text-4xl md:text-5xl font-light leading-tight"
+      >
+        {title}
+      </h2>
+      <div class="space-y-6 text-gray-500 text-lg leading-relaxed">
+        <p>
+          Nuestro equipo trabaja con pasión para hacer que cada comida no solo
+          nutra, sino también <span class="text-[#9aa98f] font-semibold"
+            >eduque y alegre los días de los más pequeños.</span
+          >
+        </p>
+        <p>
+          Actualmente, llevamos nuestra propuesta de alimentación a colegios en
+          Valencia, y estamos expandiendo nuestro servicio cada año para llegar
+          a más rincones.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
